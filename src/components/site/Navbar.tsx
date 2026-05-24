@@ -39,7 +39,7 @@ export const Navbar = () => {
         <nav
           className={`flex items-center justify-between rounded-2xl px-4 sm:px-6 py-2.5 transition-all duration-500 border ${
             scrolled
-              ? "bg-[#121214] border-zinc-800 shadow-[0_16px_40px_-12px_rgba(0,0,0,0.8)]"
+              ? "bg-[#121214]/90 backdrop-blur-md border-zinc-800 shadow-[0_16px_40px_-12px_rgba(0,0,0,0.8)]"
               : "bg-transparent border-transparent"
           }`}
         >
@@ -82,7 +82,10 @@ export const Navbar = () => {
               className="bg-[#4caf50] hover:bg-[#43a047] text-black font-bold rounded-xl px-4 py-4 h-auto shadow-[0_4px_12px_rgba(76,175,80,0.25)] hover:shadow-[0_4px_20px_rgba(76,175,80,0.4)] transition-all duration-300"
               asChild
             >
-              <a href="#download">Download</a>
+              {/* ⭐ FIXED: Hooked desktop button directly to your public folder APK route with download attributes ⭐ */}
+              <a href="/pulspense.apk" download="pulspense.apk">
+                Download
+              </a>
             </Button>
           </div>
 
@@ -112,9 +115,10 @@ export const Navbar = () => {
             <Button
               variant="default"
               className="bg-[#4caf50] hover:bg-[#43a047] text-black font-bold rounded-xl mt-2 py-5 shadow-[0_4px_12px_rgba(76,175,80,0.25)]"
+              onClick={() => setOpen(false)}
               asChild
             >
-              <a href="#download" onClick={() => setOpen(false)}>
+              <a href="/pulspense.apk" download="pulspense.apk" className="flex items-center gap-2">
                 Download App
               </a>
             </Button>

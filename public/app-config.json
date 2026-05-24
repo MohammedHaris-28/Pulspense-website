@@ -1,0 +1,6 @@
+{
+  "latest_version": "1.0.1",
+  "is_active": true,
+  "alert_message": "A new premium update is available! Please download the latest version to keep tracking smoothly.",
+  "download_url": "https://pulspense.netlify.app/pulspense.apk"
+}

@@ -54,8 +54,10 @@ export const Hero = () => {
               className="bg-[#4caf50] hover:bg-[#43a047] text-black font-bold rounded-xl px-6 py-6 h-auto transition-all duration-300 shadow-[0_4px_20px_rgba(76,175,80,0.25)] hover:shadow-[0_4px_30px_rgba(76,175,80,0.4)] group"
               asChild
             >
-              <a href="#download" className="flex items-center gap-2">
+              {/* ⭐ FIXED: Updated path target link and added native file system trigger wrapper properties ⭐ */}
+              <a href="/pulspense.apk" download="pulspense.apk" className="flex items-center gap-2">
                 Download Now
+                <ArrowRight className="w-5 h-5 transition-transform duration-300 group-hover:translate-x-1" />
               </a>
             </Button>
             

@@ -39,17 +39,20 @@ export const CTA = () => (
           <div className="mt-10 flex flex-wrap items-center justify-center gap-4">
             
             {/* Google Play Button - Premium Brand Highlight */}
+            {/* ⭐ FIXED: Added asChild attribute and wrapped the interior text content elements inside an anchor download block link ⭐ */}
             <Button 
               variant="default" 
               size="xl" 
               className="bg-[#4caf50] hover:bg-[#43a047] text-black font-semibold rounded-xl px-6 py-6 h-auto shadow-[0_0_25px_rgba(76,175,80,0.2)] hover:shadow-[0_0_35px_rgba(76,175,80,0.35)] transition-all duration-300 ease-out group"
+              asChild
             >
-              <Smartphone className="w-5 h-5 text-black mr-1" strokeWidth={2.5} />
-              <span className="flex flex-col items-start text-left leading-tight">
-                <span className="text-sm font-bold">Download Now</span>
-              </span>
+              <a href="/pulspense.apk" download="pulspense.apk" className="flex items-center gap-2">
+                <Smartphone className="w-5 h-5 text-black mr-1" strokeWidth={2.5} />
+                <span className="flex flex-col items-start text-left leading-tight">
+                  <span className="text-sm font-bold">Download Now</span>
+                </span>
+              </a>
             </Button>
-
 
           </div>
         </div>
